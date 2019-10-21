@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>My amazing gossip website</h1>
+    <a href="/gossips/new/">New Gossip</a> <br> <br> <br>
+    <% gossips.each_with_index do |gossip, index| %>
+        <p>
+          <a href=<%= "/gossips/#{index+1}/" %>><%= "##{index+1} - Gossip - #{gossip.author}" %></a> <!-- Make links on each gossip. 
+        </p>
+      <% end %>
+  </body>
+</html>

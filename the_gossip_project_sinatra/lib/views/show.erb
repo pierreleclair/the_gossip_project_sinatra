@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Gossip Page</title>
+  </head>
+  <body>
+    <h1>Gossip Page</h1>
+    <h2>Here is the page of gossip #<%=params['id'].to_i%>
+        <p>
+          <%= Gossip.find(params['id'].to_i) %>
+        </p>
+        <a href="/">Home</a>
+        <a href="/gossips/<%=params['id'].to_i%>/edit/">Edit</a>
+  </body>
+</html>
